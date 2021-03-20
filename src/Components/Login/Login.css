@@ -1,0 +1,19 @@
+.form-area{
+    margin-top: 3rem;
+    border-radius: 0.6rem;
+    border: 0.5px solid rgba(56, 56, 56, 0.747);
+}
+.toggleButton{
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    color: tomato;
+}
+.google-area{
+    text-align: center;
+    font-weight: 600;
+}
+.google-btn{
+    background-color: rgb(69, 164, 219);
+    border-radius: 1rem;
+}

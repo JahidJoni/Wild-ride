@@ -1,0 +1,25 @@
+body{
+    background-image: url('../../image/background.jpg');
+    background-size: cover;
+}
+.cars-area{
+    margin-top: 6.5rem;
+}
+.cards{
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.671);
+    background-color: rgba(0, 0, 0, 0.438);
+}
+img{
+    height: 240px;
+}
+.car-name{
+    font-weight: 700;
+    font-size: 25px;
+    color: white;
+    background-color: rgba(0, 128, 128, 0.452);
+    text-align: center;
+}
+.cards:hover{
+    border-color: turquoise;
+    background-color: rgba(18, 91, 175, 0.63);
+}

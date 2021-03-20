@@ -1,0 +1,8 @@
+.text{
+    color: black;
+    background-color: rgba(124, 124, 124, 0.541);
+    display: block;
+}
+.center{
+    text-align: center;
+}

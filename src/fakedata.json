@@ -1,0 +1,4 @@
+[{"id":1,"type":"Bike","image":"https://i.ibb.co/tLJPtL7/bike.jpg","icon":"https://robohash.org/enimetunde.bmp?size=50x50&set=set1","capacity":1,"cost":220},
+{"id":2,"type":"Car","image":"https://i.ibb.co/8KgN55n/car.jpg","icon":"https://robohash.org/velnihilut.jpg?size=50x50&set=set1","capacity":2,"cost":350},
+{"id":3,"type":"Bus","image":"https://i.ibb.co/q7Y7c6Z/Bus.jpg","icon":"https://robohash.org/etaliquamitaque.bmp?size=50x50&set=set1","capacity":4,"cost":430},
+{"id":4,"type":"Train","image":"https://i.ibb.co/PGCkGBH/train.jpg","icon":"https://robohash.org/iuremollitiaerror.bmp?size=50x50&set=set1","capacity":6,"cost":560}]

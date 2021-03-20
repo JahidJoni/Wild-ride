@@ -1,0 +1,12 @@
+.form{
+    background-color: rgb(240, 240, 240);
+    border-radius: 0.4rem;
+}
+.results{
+    background-color: rgb(129, 230, 129);
+    border-radius: 0.4rem;
+}
+.car-img{
+    width: 8rem;
+    height: 6rem;
+}
