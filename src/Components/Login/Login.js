@@ -13,7 +13,6 @@ const Login = () => {
     let history = useHistory();
     let location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
-    const element = <FontAwesomeIcon icon={faGoogle} />
     const [user, setUser] = useState({
         isSignedIn: false,
         name: '',
@@ -40,7 +39,7 @@ const Login = () => {
                 setLoggedInUser(signedInUser);
                 history.replace(from)
             }).catch((error) => {
-                const errorMessage = error.message;
+                // const errorMessage = error.message;
             });
     }
 
@@ -86,6 +85,8 @@ const Login = () => {
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setUser(newUserInfo)
+                    setLoggedInUser(newUserInfo);
+                    history.replace(from)
                 })
                 .catch((error) => {
                     const errorMessage = error.message;
@@ -113,7 +114,10 @@ const Login = () => {
 
     return (
         <div>
-            <div className="bg-light w-50 p-5 form-area container">
+            <div className="bg-light py-5 form-area container">
+            {
+                   <h5 style={{ color: 'green', textAlign: 'center', marginTop: '1rem' }}> {newUser ? 'Register' : 'Log'}</h5> 
+                }
                 <Form className="w-75 m-auto" onSubmit={handleSubmit}>
                     {newUser &&
                         <Form.Group controlId="formGroupEmail">
