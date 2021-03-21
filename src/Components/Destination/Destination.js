@@ -22,7 +22,7 @@ const Destination = () => {
 
 
     return (
-        <Container className="mt-5">
+        <Container className="mt-5" fluid>
             <Row>
                 <Col className="p-3 form w-75">
                     <div className="results p-3">
@@ -45,7 +45,7 @@ const Destination = () => {
                         <input type="submit" className="form-input m-2 d-block" />
                     </form>
                 </Col>
-                <Col className="p-3 form ml-2">
+                <Col className="m-2 justify-content-sm-center">
                     <Map> </Map>
                 </Col>
             </Row>

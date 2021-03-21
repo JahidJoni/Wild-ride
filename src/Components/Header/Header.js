@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { RideContext } from '../../App';
 import './Header.css'
@@ -13,12 +13,11 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar variant="light" className="nav">
+            <Navbar className="nav">
                 <Navbar.Brand as={Link} to="/" className="brandName">Wild Travel</Navbar.Brand>
-                <Nav className="mr-auto container">
+                <Nav className="ml-auto">
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
                     <Nav.Link as={Link} to="/destination">Destination</Nav.Link>
-                    {/* <Nav.Link as={Link} to="/blog">Blog</Nav.Link> */}
                     <Nav.Link className="userName"> <FontAwesomeIcon icon={faIdCard}/>  {loggedInUser.name || user.email }</Nav.Link>
                     <Button as={Link} to="/login" variant="dark"> Account </Button>
                 </Nav>                           

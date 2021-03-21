@@ -20,7 +20,8 @@ const Login = () => {
         password: '',
         photo: '',
         error: '',
-        success: false
+        success: false,
+        confirmPassword: ''
 
     })
     const [newUser, setNewUser] = useState(false)
@@ -64,7 +65,7 @@ const Login = () => {
         }
     }
     const handleSubmit = (e) => {
-        if (newUser && user.email && user.password) {
+        if (newUser && user.email && user.password ) {
             firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
                 .then(res => {
                     const newUserInfo = { ...user };
@@ -111,8 +112,8 @@ const Login = () => {
         }).catch(function (error) {
            
         });
-    }
-
+    } 
+    
     return (
         <div>
             <div className="bg-light py-5 form-area container">
@@ -127,7 +128,7 @@ const Login = () => {
                         </Form.Group>
                     }
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label>Email or Username</Form.Label>
                         <Form.Control type="email" onBlur={handleBlur} placeholder="Enter email" name="email" required />
 
                     </Form.Group>
@@ -139,7 +140,7 @@ const Login = () => {
                     {
                         newUser && <Form.Group controlId="formBasicPassword">
                             <Form.Label>Confirm Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" required />
+                            <Form.Control type="password" onBlur={handleBlur} placeholder="Password" name="confirmPassword" required />
                         </Form.Group>
                     }
                     <Form.Group controlId="formBasicCheckbox" className="d-flex justify-content-between">

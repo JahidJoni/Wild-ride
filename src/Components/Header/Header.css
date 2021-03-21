@@ -1,5 +1,5 @@
 .nav{
-    background-color: rgba(190, 190, 190, 0.384);
+    background-color: rgba(190, 190, 190, 0.288);
     font-weight: 500;
 }
 .items{
@@ -8,10 +8,12 @@
 .userName{
     background-color: rgba(7, 199, 71, 0.425);
     border-radius: 0.5rem;
-    font-weight: 600;
+    font-weight: 500;
+    margin: 0 1rem;
+    font-size: small;
 }
 .brandName{
     background-color: rgba(0, 128, 128, 0.39);
-    padding: 0.5rem;
+    padding: 0 0.5rem;
     border-radius: 0.4rem;
 }
