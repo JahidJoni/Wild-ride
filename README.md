@@ -1,7 +1,7 @@
 # Authentication with firebase
 
 
-## Live hosted Site
+## Live hosted Site https://wild-ride-25c6a.firebaseapp.com/
 
 Framework used:
 

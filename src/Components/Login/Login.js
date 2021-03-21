@@ -39,7 +39,8 @@ const Login = () => {
                 setLoggedInUser(signedInUser);
                 history.replace(from)
             }).catch((error) => {
-                // const errorMessage = error.message;
+                const errorMessage = error.message;
+                setLoggedInUser(errorMessage)
             });
     }
 
@@ -53,7 +54,9 @@ const Login = () => {
         if (e.target.name === 'password') {
             isFieldValid = e.target.value.length > 5;
         }
-
+        if (e.target.name === 'name') {
+            isFieldValid = e.target.value.length > 2;
+        }
         if (isFieldValid) {
             let newUserInfo = { ...user };
             newUserInfo[e.target.name] = e.target.value;
@@ -85,7 +88,7 @@ const Login = () => {
                     newUserInfo.error = '';
                     newUserInfo.success = true;
                     setUser(newUserInfo)
-                    setLoggedInUser(newUserInfo);
+                    setLoggedInUser(newUserInfo)
                     history.replace(from)
                 })
                 .catch((error) => {
@@ -94,7 +97,6 @@ const Login = () => {
                     newUserInfo.error = errorMessage;
                     newUserInfo.success = false;
                     setUser(newUserInfo);
-                    history.replace(from)
                 });
         }
         e.preventDefault();
@@ -102,7 +104,6 @@ const Login = () => {
 
     const updateUserName = name => {
         const user = firebase.auth().currentUser;
-
         user.updateProfile({
             displayName: name
         }).then(function () {
@@ -116,7 +117,7 @@ const Login = () => {
         <div>
             <div className="bg-light py-5 form-area container">
             {
-                   <h5 style={{ color: 'green', textAlign: 'center', marginTop: '1rem' }}> {newUser ? 'Register' : 'Log'}</h5> 
+                   <h5 style={{ color: 'green', textAlign: 'center', marginTop: '1rem' }}> {newUser ? 'Register' : 'Log In'}</h5> 
                 }
                 <Form className="w-75 m-auto" onSubmit={handleSubmit}>
                     {newUser &&
@@ -160,6 +161,7 @@ const Login = () => {
             <div className="google-area mb-3">
                 <p>-----------Or-----------</p>
                 <Button type="submit" onClick={handleGoogleSignIn} className="px-5 py-1 google-btn" ><FontAwesomeIcon icon={faGoogle}></FontAwesomeIcon>  Continue with Google </Button>
+                <p style={{ color: 'red', textAlign: 'center', marginTop: '1rem' }}> {loggedInUser.error}</p>
             </div>
         </div>
     );

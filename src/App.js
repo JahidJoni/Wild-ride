@@ -24,9 +24,11 @@ function App() {
   }, [])
 
   const [loggedInUser, setLoggedInUser] = useState({});
+  const [user, setUser] = useState({})
+  const [newUser, setNewUser] = useState()
 
   return (
-  <RideContext.Provider value={[loggedInUser, setLoggedInUser]}>
+  <RideContext.Provider value={[loggedInUser, setLoggedInUser, user, setUser, newUser, setNewUser]}>
     <Router>
       <Header></Header>
       <Switch>
